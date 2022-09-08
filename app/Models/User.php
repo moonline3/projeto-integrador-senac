@@ -24,7 +24,7 @@ class User extends Authenticatable
         'cpf',
         'phone',
         'type',
-        'estabelecimento_id'
+        'establishments_id'
           ];
 
     /**
