@@ -14,9 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('menus', function (Blueprint $table) {
-            $table->id();
+          $table->id();
             $table->string('name');
+            $table->text('description')->nullable();
+            $table->boolean('is_active');
+            $table->foreignId('establishment');
+             ->constrained('establishments')
+             ->cascadeOnDelete();
 
+             $table->timestamps(),
         });
     }
 
