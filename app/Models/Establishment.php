@@ -16,4 +16,23 @@ class Establishment extends Model
       'adress',
       'phone',
     ];
+
+public function users()
+{
+ return $this->hasMany(User::class);
+}
+
+public function menus()
+{
+  return $this->hasMany(Menu::class);
+}
+
+public function products()
+{
+  return $this->hasMany(Products::class)
+}
+
+public function orders()
+{
+  return $this->hasMany(Order::class)
 }

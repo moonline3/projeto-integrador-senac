@@ -27,9 +27,9 @@ return new class extends Migration
             ->constrained('menus')
             ->nullOnDelete();
 
-          $table->foreignId9('establishment_id')
-           -constrained('establishments')
-           -cascadeOnDelete();
+          $table->foreignId('establishment_id')
+           ->constrained('establishments')
+           ->cascadeOnDelete();
 
 
             $table->timestamps();
