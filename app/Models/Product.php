@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Product extends Model
 {
     use HasFactory;
 
     protected $fillable =
     [
-      'menu_id',
-      'menus',
-      'product_id',
-      'products',
+      'name',
+      'description',
+      'price_cents',
+      'is_available',
+      'establishment_id',
+      'establishments',
     ];
 
     public function establishment()
@@ -22,4 +24,8 @@ class Order extends Model
       return $this->belongsTo(Establishment::class);
     }
 
+   public function menus()
+   {
+     return $this->belongsToMany(Menu::class);
+   }
 }
