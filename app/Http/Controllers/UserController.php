@@ -36,7 +36,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        User::create(
+          'name' => $data['nome']
+          'phone' => $data['telefone']
+          'adress' => $data['endereço']
+          'cpf' => $data['cpf']
+          'login' => $data['login']
+        );
     }
 
     /**
