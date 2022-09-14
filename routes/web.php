@@ -26,3 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/testelogin', function () {
   return view ('login');
 });
+Route::middleware('auth')->group(function(){
+  Route::resource('user', App\Http\Controllers\UserController::class);
+
+});
