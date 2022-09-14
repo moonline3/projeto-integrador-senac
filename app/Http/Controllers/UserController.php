@@ -13,7 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+          $users = User::all();
+          return view('users.index', ['users'=> $users]);
     }
 
     /**
@@ -82,6 +84,4 @@ class UserController extends Controller
         //
     }
 
-    $users = User::all();
-    return view('users.index', ['users'=> $users])
 }

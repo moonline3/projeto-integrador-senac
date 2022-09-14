@@ -24,12 +24,13 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($users as $user)
       <tr>
-        <th scope="row">Amora Aleno</th>
-        <td>02334578</td>
-        <td>rua marechal</td>
-        <td>429113456</td>
-        <td>bistecafofo@gmail</td>
+        <th scope="row">({ $user->nome})</th>
+        <td>({ $user->cpf})</td>
+        <td>({ $user->endereço})</td>
+        <td>({ $user->telefone})</td>
+        <td>({ $user->login})</td>
         <td><button type="button" class="btn btn-link">Editar</td>
           <td><button type="button" class="btn btn-link">Remover</td>
       </tr>
