@@ -19,7 +19,8 @@
 <div class="container mt-4">
   <h1>Cadastro de Funcionário</h1>
   <br>
-  <form class="row g-3">
+  <form class="row g-3" method="POST" action="{{route('user.store')}}">
+    @csrf
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nome</label>
       <input type="email" class="form-control" id="inputEmail4">
