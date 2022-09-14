@@ -34,12 +34,14 @@
         <td><button type="button" class="btn btn-link">Editar</td>
           <td><button type="button" class="btn btn-link">Remover</td>
       </tr>
+      </tbody>
+      @foreach($users as $user)
       <tr>
-        <th scope="row">Milo Castello</th>
-        <td>07354589</td>
-        <td>rua das flores</td>
-        <td>42988253</td>
-        <td>MiloMiguel@gmail</td>
+        <th scope="row">({ $user->nome})</th>
+        <td>({ $user->cpf})</td>
+        <td>({ $user->endereço})</td>
+        <td>({ $user->telefone})</td>
+        <td>({ $user->login})</td>
         <td><button type="button" class="btn btn-link">Editar</td>
           <td><button type="button" class="btn btn-link">Remover</td>
       </tr>
@@ -48,6 +50,7 @@
         <td colspan="2"></td>
         <td></td>
       </tr>
+      @endforeach
     </tbody>
   </table>
 </div>
