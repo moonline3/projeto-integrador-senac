@@ -15,44 +15,55 @@
 </div>
 <br>
 <div class="container mt-4">
-  <h1>Cadastro de Empresa</h1>
+  <h1>Cadastro de Empresa</h1>,
+
   <form class="row g-3">
+
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nome Falso</label>
       <input type="email" class="form-control" id="inputEmail4">
     </div>
+
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Telefone</label>
       <input type="password" class="form-control" id="inputPassword4">
     </div>
+
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Razão Social</label>
       <input type="email" class="form-control" id="inputEmail4">
     </div>
+
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">CNPJ</label>
       <input type="password" class="form-control" id="inputPassword4">
     </div>
+
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
       <input type="email" class="form-control" id="inputEmail4">
     </div>
+
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Senha</label>
       <input type="password" class="form-control" id="inputPassword4">
     </div>
+
     <div class="col-12">
       <label for="inputAddress" class="form-label">Endereço</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Rua Jorje Amálio">
     </div>
+
     <div class="col-12">
       <label for="inputAddress2" class="form-label">Gerente(Responsável)</label>
       <input type="text" class="form-control" id="inputAddress2">
     </div>
+
     <div class="col-md-6">
       <label for="inputCity" class="form-label">Cidade</label>
       <input type="text" class="form-control" id="inputCity">
     </div>
+
     <div class="col-md-4">
       <label for="inputState" class="form-label">Estado</label>
       <select id="inputState" class="form-select">
@@ -88,3 +99,4 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </html>
+<!-- Falta tamem -->
