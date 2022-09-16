@@ -19,19 +19,20 @@
 <div class="container mt-4">
   <h1>Cadastro de Funcionário</h1>
   <br>
-  <form class="row g-3" method="POST" action="{{route('user.store')}}">
+  <form class="row g-3" method="POST" action="{{route('user.update')}}">
     @csrf
+    @method('put')
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nome</label>
-      <input type="email" class="form-control" name='name' id="inputEmail4">
+      <input type="email" class="form-control" name='name' value="{($user->name)}">
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Telefone</label>
-      <input type="password" class="form-control" name='phone' id="inputPassword4">
+      <input type="password" class="form-control" name='phone' value="{($user->phone)}">
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" name='email' id="inputEmail4">
+      <input type="email" class="form-control" name='email' value="{($user->email)}">
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Senha</label>
@@ -39,11 +40,11 @@
     </div>
     <div class="col-12">
       <label for="inputAddress" class="form-label">Endereço</label>
-      <input type="text" class="form-control" name='adress' id="inputAddress" placeholder="1234 Rua Jorje Amálio">
+      <input type="text" class="form-control" name='adress' value="{($user->adress)}" placeholder="1234 Rua Jorje Amálio">
     </div>
     <div class="col-md-6">
       <label for="inputCity" class="form-label">Cidade</label>
-      <input type="text" class="form-control" name='city' id="inputCity">
+      <input type="text" class="form-control" id="inputCity">
     </div>
     <div class="col-md-4">
       <label for="inputState" class="form-label">Estado</label>

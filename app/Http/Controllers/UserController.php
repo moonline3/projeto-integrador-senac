@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -25,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -37,13 +38,12 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        User::create(
-          'name' => $data['nome']
-          'phone' => $data['telefone']
-          'adress' => $data['endereço']
-          'cpf' => $data['cpf']
-          'login' => $data['login']
-        );
+        $data['password'] = \Hash::make($data['password']);
+        User::create($data);
+
+
+          return redirect->route('user.index');
+
     }
 
     /**
@@ -54,7 +54,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('users.show', ['user' => $user]);
     }
 
     /**
@@ -63,9 +63,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('users.edit', ['user' => $user]);
     }
 
     /**
@@ -77,7 +77,15 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        if ($data['password'] === null){
+          unset($data['password']);
+        } else {
+          $data['password'] = \Hash::make($data['password']);
+        }
+        $user->update($data);
+
+        return redirect()->route('user.show', $user->id);
     }
 
     /**
@@ -86,9 +94,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('user.index');
     }
 
 }

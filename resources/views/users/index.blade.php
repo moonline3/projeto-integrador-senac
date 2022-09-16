@@ -33,8 +33,10 @@
         <td>({ $user->login})</td>
         <td><button type="button" class="btn btn-link">Editar</td>
           <td><button type="button" class="btn btn-link">Remover</td>
+            <!-- <a href="{(route('user.edit', $user->id))}" -->
       </tr>
       </tbody>
+    <tbody>
       @foreach($users as $user)
       <tr>
         <th scope="row">({ $user->nome})</th>
@@ -45,6 +47,16 @@
         <td><button type="button" class="btn btn-link">Editar</td>
           <td><button type="button" class="btn btn-link">Remover</td>
       </tr>
+      <form action="{(route('user.destroy', user->id))}" method="post">
+        @csrf
+        @method('delete')
+        <button type="button" name="button"></button>
+
+      </form>
+
+
+
+      </tbody>
       <tr>
         <th scope="row"></th>
         <td colspan="2"></td>
