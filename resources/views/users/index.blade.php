@@ -5,7 +5,7 @@
     <h2>Funcionários</h2>
 
     <table class="table">
-      <button type="button" class="btn btn-outline-secondary btn-lg"><a href="file:///home/kingdreemur/Downloads/ProjetoGerente/Login(SemNumero).html">Criar Novo</a></button>
+      <a class="btn btn-outline-secondary btn-lg"href="{{route('user.create')}}">Criar Novo</a>
     <thead>
       <tr>
         <th scope="col">Nome</th>
@@ -21,21 +21,21 @@
     <tbody>
       @foreach($users as $user)
       <tr>
-        <th scope="row">{{$user->nome}}</th>
+        <th scope="row">{{$user->name}}</th>
         <td>{{$user->cpf}}</td>
-        <td>{{$user->endereço}}</td>
-        <td>{{$user->telefone}}</td>
-        <td>{{$user->login}}</td>
-        <td><button type="button" class="btn btn-link">Editar</td>
-          <td><button type="button" class="btn btn-link">Remover</td>
+        <td>{{$user->address}}</td>
+        <td>{{$user->phone}}</td>
+        <td>{{$user->email}}</td>
+        <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-link">Editar </a></td>
+        <td>
+            <form action="{{route('user.destroy', $user->id)}}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit" class="btn btn-link">Remover</button>
+           </form>
+        </td>
               <a href="{(route('user.edit', $user->id))}"></a>
 
-      <form action="{(route('user.destroy', user->id))}" method="post">
-        @csrf
-        @method('delete')
-        <button type="button" name="button"></button>
-
-      </form>
 
 
       </tr>

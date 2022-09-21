@@ -29,4 +29,5 @@ Route::get('/testelogin', function () {
 Route::middleware('auth')->group(function(){
   Route::resource('user', App\Http\Controllers\UserController::class);
 
+Route::resource('product', App\Http\Controllers\ProductController::class);
 });

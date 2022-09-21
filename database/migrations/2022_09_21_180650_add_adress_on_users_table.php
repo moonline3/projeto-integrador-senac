@@ -13,14 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('establishments', function (Blueprint $table) {
-            $table->id();
-            $table->string('cnpj');
-            $table->string('trading_name');
-            $table->string('company_name');
+        Schema::table('users', function (Blueprint $table) {
             $table->string('address');
-            $table->string('phone');
-            $table->timestamps();
         });
     }
 
@@ -31,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estabelecimento');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumns(['address']);
+        });
     }
 };
