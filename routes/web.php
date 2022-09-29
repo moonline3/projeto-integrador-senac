@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ateste', function () {
-    return view('exemplo');
+Route::get('/', function () {
+    return view('auth.login');
 });
 
 Route::get('/novarota', 'App\Http\Controllers\Controllerteste@novomundo');

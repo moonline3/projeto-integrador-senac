@@ -38,11 +38,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['product'] = \Hash::make($data['password']);
-
-        Product::create($data);
-        return redirect()->route('product.index');
+       //
     }
 
     /**
@@ -53,7 +49,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show' ['product'=>$product]);
+        return view('products.show', ['product'=>$product]);
     }
 
     /**
