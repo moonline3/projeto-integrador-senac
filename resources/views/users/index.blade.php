@@ -32,20 +32,11 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Amora Aleno</th>
-        <td>02334578</td>
-        <td>rua marechal</td>
-        <td>(42)91134-5658</td>
-        <td>bistecafofo@gmail</td>
-        <td><button type="button" class="btn btn-link">Editar</td>
-          <td><button type="button" class="btn btn-link">Remover</td>
-      </tr>
-      <tr>
-        <th scope="row">Milo Castello</th>
-        <td>07354589</td>
-        <td>rua das flores</td>
-        <td>(42)98825-3474</td>
-        <td>MiloMiguel@gmail</td>
+        <th scope="row">{{$users->products}}</th>
+        <td>{{$user->cpf}}</td>
+        <td>{{$user->address}}</td>
+        <td>{{$user->phone}}</td>
+        <td>{{$user->email}}</td>
         <td><button type="button" class="btn btn-link">Editar</td>
           <td><button type="button" class="btn btn-link">Remover</td>
       </tr>
@@ -55,4 +46,3 @@
   </body>
 </html>
 @endsection
-<!-- falta arrumar -->

@@ -6,7 +6,6 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
   <body>
@@ -14,6 +13,7 @@
          style="background-image: url('https://img.freepik.com/fotos-gratis/prancheta-de-vista-superior-com-lapis-em-cima-da-mesa_23-2148539063.jpg?w=2000');
                 height: 100vh">
 <div class="d-flex justify-content-center">
+    <form method="POST" action="{{route('user.store)}}">
 
   Checkl!st
 </div>
@@ -25,23 +25,23 @@
   <form class="row g-3">
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nome</label>
-      <input type="text" class="form-control" id="inputEmail4">
+      <input type="text" class="form-control" id="inputEmail4" name="name">
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Telefone</label>
-      <input type="number" class="form-control" id="inputPassword4">
+      <input type="number" class="form-control" id="inputPassword4" name="phone">
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <input type="email" class="form-control" id="inputEmail4" name="email">
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Senha</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <input type="password" class="form-control" id="inputPassword4" name="password">
     </div>
     <div class="col-12">
       <label for="inputAddress" class="form-label">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Rua Jorje Amálio">
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Rua Jorje Amálio" name="address">
     </div>
     <div class="col-md-6">
       <label for="inputCity" class="form-label">Cidade</label>
@@ -83,8 +83,8 @@
       </select>
     </div>
     <div class="col-md-2">
-      <label for="inputZip" class="form-label">CEP</label>
-      <input type="number" class="form-control" id="inputZip">
+      <label for="inputZip" class="form-label">CPF</label>
+      <input type="number" class="form-control" id="inputZip" name="cpf">
     </div>
     <div class="col-12">
       <div class="form-check">

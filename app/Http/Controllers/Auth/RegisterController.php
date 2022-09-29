@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'cpf' => $data['cpf'],
             'phone' => $data['phone'],
             'type' => $data['type'],
+            'address' => $data['address'],
             'password' => \Hash::make($data['password']),
 
         ]);
