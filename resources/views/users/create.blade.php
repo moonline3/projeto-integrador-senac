@@ -13,7 +13,7 @@
          style="background-image: url('https://img.freepik.com/fotos-gratis/prancheta-de-vista-superior-com-lapis-em-cima-da-mesa_23-2148539063.jpg?w=2000');
                 height: 100vh">
 <div class="d-flex justify-content-center">
-    <form method="POST" action="{{route('user.store)}}">
+    <form method="POST" action="{{route('user.store')}}">
 
   Checkl!st
 </div>

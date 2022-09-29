@@ -37,7 +37,7 @@
         <td>{{$user->address}}</td>
         <td>{{$user->phone}}</td>
         <td>{{$user->email}}</td>
-        <td><button type="button" class="btn btn-link">Editar</td>
+        <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-link">Editar</a>
           <td><button type="button" class="btn btn-link">Remover</td>
       </tr>
     </tbody>

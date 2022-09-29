@@ -2,7 +2,7 @@
 @section('content')
 <h1>Detalhes do Usuario</h1>
 <u1>
-  <li>{{$product->products}}</li>
+  <li>{{$product->name}</li>
   <li>{{$product->description}}</li>
   <li>{{$product->price_cents}}</li>
   <li>{{$product->is_available}}</li>
