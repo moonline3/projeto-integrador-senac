@@ -40,16 +40,17 @@ class ProductController extends Controller
     {
     $data = $request->validated();
     $data['establishment_id'] = \Auth::user()->establishment_id;
-    $data['price_cents'] 
-       if($request->hasFile('image')) {
+    $data['price_cents'];
+       if ($request->hasFile('image')) {
          $imageFile =$request->file('image');
 
          $image_path = $imageFile->storeAs(
-           "images/products/$product->id"
+           "images/products/$product->id",
            'image.jpg',
            'public',
          );
-         $product->update(['image_path => $imagePath'])
+
+         $product->update(['image_path' => $imagePath]);
        }
        return redirect()->route('products.index');
     }
