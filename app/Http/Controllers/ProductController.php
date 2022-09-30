@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        
+
         return view('products.index', ['products'=> $products]);
     }
 
@@ -38,7 +38,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       //
+    $data = $request->validated();
+    $data['establishment_id'] = \Auth::user()->establishment_id;
+    $data['price_cents'] 
+       if($request->hasFile('image')) {
+         $imageFile =$request->file('image');
+
+         $image_path = $imageFile->storeAs(
+           "images/products/$product->id"
+           'image.jpg',
+           'public',
+         );
+         $product->update(['image_path => $imagePath'])
+       }
+       return redirect()->route('products.index');
     }
 
     /**
