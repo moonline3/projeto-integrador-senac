@@ -16,7 +16,6 @@ class Product extends Model
       'price_cents',
       'is_available',
       'establishment_id',
-      'establishments',
     ];
 
     public function establishment()

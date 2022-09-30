@@ -11,7 +11,7 @@ height: 100vh">
     <h5  class="text-center fs-3 mb-5" >Adicionar Produto</h5>
       <div class="row fs-5">
         <p class="col">Nome: <!--Caixa--></p>
-        <input placeholder="Batata" class="col" type="text" name="products" id="" style="height: 2rem;">
+        <input placeholder="Batata" class="col" type="text" name="name" id="" style="height: 2rem;">
       </div>
       <div class="row fs-5">
         <p class="col">Preço: <!--Caixa--></p>
