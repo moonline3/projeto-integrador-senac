@@ -39,7 +39,7 @@
 </svg></td>
             <td>
 
-              <!-- <form method="POST" action="{{route('product.edit', $product->id)}}">
+              <!-- <form method="POST" action="{{route('product.update', $product->id)}}">
                 @csrf
                 @method('put') -->
 

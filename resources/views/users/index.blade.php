@@ -43,7 +43,7 @@
 
 
 
-        <td><form action="{{route('user.edit', $user->id)}}" class="btn btn-link" method="post">Editar
+        <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-link" method="post">Editar </a>
           </form> </td>
 
 
