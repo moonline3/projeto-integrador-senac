@@ -30,16 +30,41 @@
         <th scope="col">Remover</th>
       </tr>
     </thead>
+
     <tbody>
+      @foreach ($users as $user)
       <tr>
-        <th scope="row">{{$users->products}}</th>
+        <th scope="row">{{$user->name}}</th>
         <td>{{$user->cpf}}</td>
         <td>{{$user->address}}</td>
         <td>{{$user->phone}}</td>
         <td>{{$user->email}}</td>
-        <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-link">Editar</a>
-          <td><button type="button" class="btn btn-link">Remover</td>
+
+
+
+
+        <td>  <form class="row g-3" method="POST" action="{{route('user.update', $user->id)}}">
+          <button type="submit" class="btn btn-link">Editar
+            @csrf
+            @method('put')
+          </form> </td>
+
+
+
+
+
+
+          <td><form action="{{route('user.destroy', $user->id)}}" method="post">
+            @csrf
+            @method('delete')
+
+          <td><button type="submit" class="btn btn-link">Remover</td>
+
+
+         </button>
+
       </tr>
+      @endforeach
     </tbody>
   </table>
 </div>
