@@ -43,10 +43,7 @@
 
 
 
-        <td>  <form class="row g-3" method="POST" action="{{route('user.update', $user->id)}}">
-          <button type="submit" class="btn btn-link">Editar
-            @csrf
-            @method('put')
+        <td><form action="{{route('user.edit', $user->id)}}" class="btn btn-link" method="post">Editar
           </form> </td>
 
 
