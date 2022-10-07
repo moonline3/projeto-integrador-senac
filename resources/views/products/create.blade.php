@@ -5,7 +5,7 @@
 
 <body class=" bg-dark.bg-gradient" style="width: 100vw; height: 100vh; background-image: url('https://img.freepik.com/fotos-gratis/prancheta-de-vista-superior-com-lapis-em-cima-da-mesa_23-2148539063.jpg?w=2000');
 height: 100vh">
-<form method="POST" action="{{route('product.store)}}">
+<form method="POST" action="{{route('product.store')}}" enctype="multipart/form-data">
     @csrf
   <div class="position-absolute top-50 start-50 translate-middle border-box p-5 btn-outline-primary border rounded-2 bg-white" style="width: 25rem;">
     <h5  class="text-center fs-3 mb-5" >Adicionar Produto</h5>
@@ -29,7 +29,7 @@ height: 100vh">
       </div>
       <div class="col-md-4 pt-2 fs-5">
         <label for="inputState" class="form-label">Imagem:</label>
-        <select id="inputState" class="form-select" style="width: 18rem;">
+        <select id="inputState" class="form-select" style="width: 18rem;"> 
           <option selected>Selecione o arquivo</option>
         </select>
       </div>

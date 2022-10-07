@@ -28,6 +28,8 @@ class ProductController extends Controller
     public function create()
     {
         return view('products.create');
+        $data['image_path'] = $image_path;
+        $product->create($data);
     }
 
     /**
@@ -40,17 +42,25 @@ class ProductController extends Controller
     {
     $data = $request->validated();
     $data['establishment_id'] = \Auth::user()->establishment_id;
+
     $data['price_cents'];
+
+     $product = Product::create($data);
        if ($request->hasFile('image')) {
          $imageFile =$request->file('image');
 
-         $image_path = $imageFile->storeAs(
+
+       $product->update([
+         'image_path' => $imageFile->storeAs(
            "images/products/$product->id",
            'image.jpg',
            'public',
-         );
+           )
 
-         $product->update(['image_path' => $imagePath]);
+
+         ]);
+
+
        }
        return redirect()->route('products.index');
     }

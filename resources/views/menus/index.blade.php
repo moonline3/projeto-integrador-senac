@@ -1,6 +1,8 @@
 @extends ('layouts.layout')
 @section ('content')
 
+<!-- Copia do Users -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,36 +16,31 @@
   height: 100vh">
     <div class="container">
 
-      <h1 style="margin-top: 30px;">Funcionários</h1>
-<a class="btn btn-light" href="{{route('user.create')}}">Criar Novo</a>
+      <h1 style="margin-top: 30px;">Cardápios</h1>
+<a class="btn btn-light" href="{{route('menu.create')}}">Criar Novo</a>
     <div style="margin-top: 20px;border-style: solid; border-color: white; border-width: 1px; border-radius: 10px;background-color: white;">
         <table class="table">
 
         <thead>
         <tr>
         <th scope="col">Nome</th>
-        <th scope="col">CPF</th>
-        <th scope="col">Endereço</th>
-        <th scope="col">Telefone</th>
-        <th scope="col">Login</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Remover</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Ativo</th>
+
       </tr>
     </thead>
 
     <tbody>
-      @foreach ($users as $user)
+      @foreach ($menus as $menu)
       <tr>
-        <th scope="row">{{$user->name}}</th>
-        <td>{{$user->cpf}}</td>
-        <td>{{$user->address}}</td>
-        <td>{{$user->phone}}</td>
-        <td>{{$user->email}}</td>
+        <th scope="row">{{$menu->name}}</th>
+        <td>{{$menu->description}}</td>
+        <td>{{$menu->is_active}}</td>
 
 
 
 
-        <td><a href="{{route('user.edit', $user->id)}}" class="btn btn-link" method="post">Editar </a>
+        <td><a href="{{route('menu.edit', $menu->id)}}" class="btn btn-link" method="post">Editar </a>
           </form> </td>
 
 
@@ -51,7 +48,7 @@
 
 
 
-          <td><form action="{{route('user.destroy', $user->id)}}" method="post">
+          <td><form action="{{route('menu.destroy', $menu->id)}}" method="post">
             @csrf
             @method('delete')
 
