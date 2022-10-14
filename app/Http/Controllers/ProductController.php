@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Request\ProductRequest;
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 
 class ProductController extends Controller
@@ -38,7 +38,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
     $data = $request->validated();
     $data['establishment_id'] = \Auth::user()->establishment_id;
@@ -62,7 +62,7 @@ class ProductController extends Controller
 
 
        }
-       return redirect()->route('products.index');
+       return redirect()->route('product.index');
     }
 
     /**

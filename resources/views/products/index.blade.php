@@ -8,7 +8,7 @@
     <div class="container">
 
       <h1 style="margin-top: 30px;">Produtos</h1>
-<a href="{{route('product.store')}}" class="btn btn-light">Criar Novo</a>
+<a href="{{route('product.create')}}" class="btn btn-light">Criar Novo</a>
     <div style="margin-top: 20px;border-style: solid; border-color: white; border-width: 1px; border-radius: 10px;background-color: white;">
         <table class="table">
 

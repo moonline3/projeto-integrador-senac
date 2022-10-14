@@ -28,4 +28,25 @@ class MenuController extends Controller
         'is_available' => $data['is_available']
       ]);
     }
+    public function update(MenuRequest $request, Menu $menu)
+    {
+      $data = $request->validated();
+      $data['is_active'] = ($data['is_active' ?? ''] == 'on';
+      $menu->update($data);
+      return redirect()->route('menu.show', $menu->id);
+    }
+
+    public function destroy(Menu $menu)
+    {
+        $menu->delete();
+        return redirect()->route('menu.index');
+    }
+
+    public function index()
+    {
+        $menus = Menu::all();
+
+        return view('menu.index', ['menus'=> $menus]);
+    }
+
 }

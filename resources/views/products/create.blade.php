@@ -29,11 +29,9 @@ height: 100vh">
       </div>
       <div class="col-md-4 pt-2 fs-5">
         <label for="inputState" class="form-label">Imagem:</label>
-        <select id="inputState" class="form-select" style="width: 18rem;"> 
-          <option selected>Selecione o arquivo</option>
-        </select>
+        <input type='file' id="inputState" class="form-select" style="width: 18rem;">
       </div>
-      <button type="button" class="btn btn-primary mt-4 text-center mt-2" style="width: 100%; ">Criar produto</button>
+      <button type="submit" class="btn btn-primary mt-4 text-center mt-2" style="width: 100%; ">Criar produto</button>
   </div>
 </form>
 
