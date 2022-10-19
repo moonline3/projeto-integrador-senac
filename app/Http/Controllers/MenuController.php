@@ -3,20 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 use App\Models\Menu;
 
 class MenuController extends Controller
 {
-    public function index()
-    {
-    $menus = Menu::all();
-    return view('menus.index',
-    ['menus' => $menus]);
-    }
+      public function index()
+      {
+          $menus = Menu::all();
+
+          return view('menus.index', ['menus'=> $menus]);
+      }
+
+
     public function create()
     {
       return view('menus.create');
     }
+
+
     public function store(Request $request)
     {
       $data = $request->all();
@@ -31,7 +36,7 @@ class MenuController extends Controller
     public function update(MenuRequest $request, Menu $menu)
     {
       $data = $request->validated();
-      $data['is_active'] = ($data['is_active' ?? ''] == 'on';
+      // $data['is_active'] = ($data['is_active' ?? ''] == 'on';
       $menu->update($data);
       return redirect()->route('menu.show', $menu->id);
     }
@@ -42,11 +47,17 @@ class MenuController extends Controller
         return redirect()->route('menu.index');
     }
 
-    public function index()
-    {
-        $menus = Menu::all();
 
-        return view('menu.index', ['menus'=> $menus]);
-    }
+    public function show(Menu $menu)
+     {
+         $addableProducts = Product::where('establishment_id',
+                            $menu->establishment_id)
+                            ->get();
+         return view('menus.show', ['menu'=>$menu, 'addableProducts', $addableProducts]);
+     }
 
+     public function edit(Menu $menu)
+     {
+         return view('menus.edit', ['menu'=> $menu]);
+     }
 }

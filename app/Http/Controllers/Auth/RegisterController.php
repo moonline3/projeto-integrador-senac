@@ -65,7 +65,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      // Establishment::create()
+      $establishment = Establishment::create([
+        'company_name' => $data['company_name'],
+        'trading_name' => $data['trading_name'],
+        'cnpj' => $data['cnpj'],
+        'phone' => $data['phone'],
+        'address' => $data['address'],
+      ]);
+
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -74,7 +82,7 @@ class RegisterController extends Controller
             'type' => $data['type'],
             'address' => $data['address'],
             'password' => \Hash::make($data['password']),
-
+            'establishment_id' => $establishment->id,
         ]);
     }
 }

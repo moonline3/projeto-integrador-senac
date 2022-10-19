@@ -110,19 +110,19 @@
                                         <form class="row g-3">
                                           <div class="col-md-6">
                                             <label for="inputEmail4" class="form-label">CNPJ</label>
-                                            <input type="email" class="form-control" id="inputText">
+                                            <input type="email" class="form-control" id="inputText" name="cnpj">
                                           </div>
                                           <div class="col-md-6">
                                             <label for="inputPassword4" class="form-label">Razão Social</label>
-                                            <input type="password" class="form-control" id="inputPhone">
+                                            <input type="password" class="form-control" id="inputPhone" name="company_name">
                                           </div>
                                           <div class="col-md-6">
                                             <label for="inputEmail4" class="form-label">Endereço</label>
-                                            <input type="email" class="form-control" id="inputText">
+                                            <input type="email" class="form-control" id="inputText" name="adress">
                                           </div>
                                           <div class="col-md-6">
-                                            <label for="inputPassword4" class="form-label">Telefone</label>
-                                            <input type="password" class="form-control" id="inputText">
+                                            <label for="inputPassword4" class="form-label">Nome Fantasia</label>
+                                            <input type="password" class="form-control" id="inputText" name="trading_name">
                                           </div>
                                           <div class="col-md-6">
                                             <label for="inputEmail4" class="form-label">Gerente</label>
@@ -130,7 +130,7 @@
                                           </div>
                                           <div class="col-md-6">
                                             <label for="inputPassword4" class="form-label">Telefone</label>
-                                            <input type="password" class="form-control" id="inputPassword1">
+                                            <input type="password" class="form-control" id="inputPassword1" name="phone">
                                           </div>
                                           <div class="col-12">
                                             <label for="inputAddress" class="form-label">Login</label>
