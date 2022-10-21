@@ -44,8 +44,8 @@ class ProductController extends Controller
     $data = $request->validated();
     $data['establishment_id'] = \Auth::user()->establishment_id;
 
-    $data['price_cents'];
-
+    $data['price_cents']=(int)($data['price_cents'] *100);
+    $data['is_available']=(isset($data['is_available'])) ? 1 : 0 ;
      $product = Product::create($data);
        if ($request->hasFile('image')) {
          $imageFile =$request->file('image');
@@ -98,11 +98,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $data = $request->all();
-        if ($data['password'] === null) {
-          unset($data['password']);
-        } else {
-          $data['password'] = \Hash::make($data['password']);
-        }
+
         $product->update($data);
 
         return redirect()->route('product.show', $product);

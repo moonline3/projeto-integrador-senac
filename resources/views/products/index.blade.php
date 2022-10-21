@@ -29,8 +29,8 @@
         <tr>
           <th scope="row">{{$product->name}}</th>
           <td>{{$product->description}}</td>
-          <td>{{$product->price_cents}}</td>
-          <td>{{$product->is_available}}</td>
+          <td>{{$product->price_cents/100}}</td>
+          <td>{{$product->is_available ? 'Disponível' : 'Indisponivel'}}</td>
 
 
 

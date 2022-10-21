@@ -39,7 +39,7 @@
       <tr>
         <th scope="row">{{$menu->name}}</th>
         <td>{{$menu->description}}</td>
-        <td>{{$menu->is_active}}</td>
+        <td>{{$menu->is_active ? 'Disponível' : 'Indisponivel'}}</td>
 
 
         <td><a href="{{route('menu.edit', $menu->id)}}" class="btn btn-link" method="post">Editar </a>

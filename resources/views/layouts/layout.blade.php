@@ -16,23 +16,23 @@ height: 100vh">
 <nav class="navbar navbar-expand-lg bg-light" style="--bs-bg-opacity: 0.5 !important;">
 <div class="container-fluid">
   <a class="navbar-brand" href="#">
-    <img src="/home/moonary/Downloads/Design sem nome (1)_clipdrop-background-removal.png" alt="Logo" width="90" height="50" class="d-inline-block align-text-top">
+    <img src="https://media.discordapp.net/attachments/996863545385947266/1033099001756668034/Design_sem_nome_1_clipdrop-background-removal.png" alt="Logo" width="90" height="50" class="d-inline-block align-text-top">
   </a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <a class="navbar-brand" aria-current="page" href="#">Cardápios</a>
+  <a class="navbar-brand" aria-current="page" href="{{route('menu.index')}}">Cardápios</a>
   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="Login.html">Produtos</a>
+      <a class="nav-link active" aria-current="page" href="{{route('product.index')}}" >Produtos</a>
     </li>
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Ver Pedidos</a>
     </li>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <a class="nav-link active" aria-current="page" href="#">Funcionários</a>
+          <a class="nav-link active" aria-current="page" href="{{route('user.index')}}">Funcionários</a>
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Dados da Empresa</a>
     </li>
