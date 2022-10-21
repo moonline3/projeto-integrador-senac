@@ -25,7 +25,13 @@ height: 100vh">
         <label class="form-check-label" for="flexCheckDefault">
           Disponível
         </label>
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="is_available">
+        <select id="selectproducts" class="form-select" name="is_available" id="floatingSelect">
+
+          <option value="1">Disponível</option>
+          <option value="0">Indisponivel</option>
+
+
+        </select>
       </div>
       <div class="col-md-4 pt-2 fs-5">
         <label for="inputState" class="form-label">Imagem:</label>
