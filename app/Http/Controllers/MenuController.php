@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Menu;
+use App\Http\Requests\MenuRequest;
 
 class MenuController extends Controller
 {
@@ -53,11 +54,17 @@ class MenuController extends Controller
          $addableProducts = Product::where('establishment_id',
                             $menu->establishment_id)
                             ->get();
-         return view('menus.show', ['menu'=>$menu, 'addableProducts', $addableProducts]);
+         return view('menus.show', ['menu'=>$menu, 'addableProducts' => $addableProducts]);
      }
 
      public function edit(Menu $menu)
      {
          return view('menus.edit', ['menu'=> $menu]);
+     }
+
+
+     public function showPublic(Menu $menu)
+     {
+       return view('menus.public.show', ['menu' => $menu]);
      }
 }

@@ -26,6 +26,10 @@
         <th scope="col">Nome</th>
         <th scope="col">Descrição</th>
         <th scope="col">Ativo</th>
+        <th scope="col">Editar Cardápio</th>
+        <th scope="col">Remover Cardápio</th>
+        <th scope="col">Link Do Cardápio Publico</th>
+        <th scope="col">Detalhes do Cardápio</th>
 
       </tr>
     </thead>
@@ -38,10 +42,8 @@
         <td>{{$menu->is_active}}</td>
 
 
-
-
         <td><a href="{{route('menu.edit', $menu->id)}}" class="btn btn-link" method="post">Editar </a>
-          </form> </td>
+        </td>
 
 
 
@@ -52,14 +54,22 @@
             @csrf
             @method('delete')
 
-          <td><button type="submit" class="btn btn-link">Remover</td>
+          <button type="submit" class="btn btn-link">Remover>
 
 
-         </button>
-
+         </button> </form></td>
+         <td>
+           <a href="{{route('menu.public.show', $menu->id)}}">{{route('menu.public.show', $menu->id)}}</a>
+         </td>
+        <td> <a href="{{route('menu.show', $menu->id)}}" class="btn btn-link" method="post">Visualizar </a>
+        </td>
       </tr>
       @endforeach
     </tbody>
+
+
+
+
   </table>
 </div>
   </body>
