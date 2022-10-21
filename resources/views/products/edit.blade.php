@@ -34,7 +34,7 @@ height: 100vh">
           <option selected>Selecione o arquivo</option>
         </select>
       </div>
-      <button type="button" class="btn btn-primary mt-4 text-center mt-2" style="width: 100%; ">Editar produto</button>
+      <button type="submit" class="btn btn-primary mt-4 text-center mt-2" style="width: 100%; ">Editar produto</button>
   </div>
 </form>
 

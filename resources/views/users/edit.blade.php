@@ -8,7 +8,7 @@
 <div style="margin-top: 150px;"
 <br>
 <div class="container mt-4">
-  <h1>Cadastro de Funcionário</h1>
+  <h1>Edição de Funcionário</h1>
   <br>
   <form class="row g-3" method="POST" action="{{route('user.update', $user->id)}}">
     @csrf

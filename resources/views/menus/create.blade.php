@@ -18,11 +18,12 @@ height: 100vh">
       <input placeholder="Informações do Cardápio" class="col" type="text" name="description" id="" style="height: 2rem;">
     </div>
     <div class="form-check fs-5">
-      <label class="form-check-label" for="flexCheckDefault" name="is_available">
+      <label class="form-check-label" for="flexCheckDefault" name="is_active">
         Disponíbilidade
       </label>
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="is_available">
+      <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="is_active">
     </div>
+
     <button type="submit" class="btn btn-primary">Adicionar
     </button>
   </div>

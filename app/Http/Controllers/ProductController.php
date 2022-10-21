@@ -40,6 +40,7 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
+
     $data = $request->validated();
     $data['establishment_id'] = \Auth::user()->establishment_id;
 

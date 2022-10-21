@@ -26,12 +26,11 @@ class MenuController extends Controller
     public function store(Request $request)
     {
       $data = $request->all();
-
       Menu::create([
         'name' => $data['name'],
         'establishment_id' => \Auth::user()->establishment_id,
         'description' => $data['description'],
-        'is_available' => $data['is_available'],
+        'is_active' => (isset($data['is_active'])) ? 1 : 0 ,
       ]);
     }
     public function update(MenuRequest $request, Menu $menu)
