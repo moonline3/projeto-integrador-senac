@@ -65,6 +65,6 @@ class MenuController extends Controller
 
      public function showPublic(Menu $menu)
      {
-       return view('menus.public.show', ['menu' => $menu]);
+       return view('menus.menupublic', ['menu' => $menu]);
      }
 }

@@ -39,8 +39,9 @@
   <tbody>
     @foreach($menu->products as $product)
     <tr>
-      <td><a target="_blank" hrefk"{{route('product.show', $product->id)}}" method="post">
-      <td>{{$product->description}}/td>
+      <td><a target="_blank" href="{{route('product.show', $product->id)}}" method="post">
+      <td>{{$product->name}}</td>
+      <td>{{$product->description}}</td>
       <td>{{$product->price_cents/100}}</td>
       <td>{{$product->is_available ? 'Disponível' : 'Indisponivel'}}</td>
       <td>
@@ -52,7 +53,7 @@
             </button>
           </form>
         </div>
-      </td>
+    </td>
     </tr>
     @endforeach
   </tbody>

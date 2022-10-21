@@ -23,6 +23,8 @@ height: 100vh">
       </label>
       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="is_available">
     </div>
+    <button type="submit" class="btn btn-primary">Adicionar
+    </button>
   </div>
     <!-- <button type="submit"  -->
   </form>

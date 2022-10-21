@@ -9,7 +9,7 @@ height: 100vh">
     @csrf
     @method('put')
     <div class="position-absolute top-50 start-50 translate-middle border-box p-5 btn-outline-primary border rounded-2 bg-white" style="width: 25rem;">
-  <h5  class="text-center fs-3 mb-5" >Adicionar Cardápio</h5>
+  <h5  class="text-center fs-3 mb-5" >Editar Cardápio</h5>
     <div class="row fs-5">
       <p class="col">Nome: <!--Caixa--></p>
       <input placeholder="Produto" class="col" type="text" name="name" id="" style="height: 2rem;">
