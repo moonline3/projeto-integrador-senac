@@ -33,9 +33,7 @@ height: 100vh">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <a class="nav-link active" aria-current="page" href="{{route('user.index')}}">Funcionários</a>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Dados da Empresa</a>
-    </li>
+  
   </ul>
 </div>
 </div>

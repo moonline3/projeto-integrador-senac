@@ -22,14 +22,14 @@
 <div class="container mt-4">
   <h1>Cadastro de Funcionário</h1>
   <br>
-  <form class="row g-3">
+  <form class="row g-3" method="post" action="{{route('user.store')}}">
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Nome</label>
       <input type="text" class="form-control" id="inputEmail4" name="name">
     </div>
     <div class="col-md-6">
       <label for="inputPassword4" class="form-label">Telefone</label>
-      <input type="number" class="form-control" id="inputPassword4" name="phone">
+      <input type="text" class="form-control" id="inputPassword4" name="phone">
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
@@ -84,7 +84,7 @@
     </div>
     <div class="col-md-2">
       <label for="inputZip" class="form-label">CPF</label>
-      <input type="number" class="form-control" id="inputZip" name="cpf">
+      <input type="text" class="form-control" id="inputZip" name="cpf">
     </div>
     <div class="col-12">
       <div class="form-check">

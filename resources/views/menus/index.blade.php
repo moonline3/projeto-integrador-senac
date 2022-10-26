@@ -54,7 +54,7 @@
             @csrf
             @method('delete')
 
-          <button type="submit" class="btn btn-link">Remover>
+          <button type="submit" class="btn btn-link">Remover
 
 
          </button> </form></td>
