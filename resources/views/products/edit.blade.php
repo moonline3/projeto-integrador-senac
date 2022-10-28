@@ -9,7 +9,7 @@ height: 100vh">
   @csrf
   @method('put')
   <div class="position-absolute top-50 start-50 translate-middle border-box p-5 btn-outline-primary border rounded-2 bg-white" style="width: 25rem;">
-    <h5  class="text-center fs-3 mb-5" >Adicionar Produto</h5>
+    <h5  class="text-center fs-3 mb-5" >Editar Produto</h5>
       <div class="row fs-5">
         <p class="col">Nome: <!--Caixa--></p>
         <input placeholder="Batata" class="col" type="text" value="{{$product->name}}" name="products" id="" style="height: 2rem;">
