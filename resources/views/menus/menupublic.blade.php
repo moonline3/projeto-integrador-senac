@@ -25,9 +25,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('product.index')}}">Produtos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Ver Pedidos</a>
-          </li>
+          
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <a class="nav-link active" aria-current="page" href="{{route('user.index')}}">Funcionários</a>

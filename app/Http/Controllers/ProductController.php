@@ -94,9 +94,21 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest  $request, Product $product)
     {
-        $data = $request->all();
+
+        $data = $request->validated();
+        $data['price_cents']=(int)($data['price_cents'] *100);
+        if ($request->hasFile('image')) {
+            $imageFile =$request->file('image');
+            $data['image_path' ] =$imageFile->storeAs(
+                "images/products/$product->id",
+                'image.jpg',
+                'public',
+            );
+       }
+
+
 
         $product->update($data);
 

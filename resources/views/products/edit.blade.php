@@ -12,7 +12,7 @@ height: 100vh">
     <h5  class="text-center fs-3 mb-5" >Editar Produto</h5>
       <div class="row fs-5">
         <p class="col">Nome: <!--Caixa--></p>
-        <input placeholder="Batata" class="col" type="text" value="{{$product->name}}" name="products" id="" style="height: 2rem;">
+        <input placeholder="Batata" class="col" type="text" value="{{$product->name}}" name="name" id="" style="height: 2rem;">
       </div>
       <div class="row fs-5">
         <p class="col">Preço: <!--Caixa--></p>
@@ -26,13 +26,17 @@ height: 100vh">
         <label class="form-check-label" for="flexCheckDefault">
           Disponível
         </label>
-        <input class="form-check-input" type="checkbox" value="{{$product->is_available}}" id="flexCheckDefault" name="is_available">
+        <select id="selectproducts" class="form-select" name="is_available" id="floatingSelect">
+
+          <option value="1">Disponível</option>
+          <option value="0">Indisponivel</option>
+
+
+        </select>
       </div>
       <div class="col-md-4 pt-2 fs-5">
         <label for="inputState" class="form-label">Imagem:</label>
-        <select id="inputState" class="form-select" style="width: 18rem;">
-          <option selected>Selecione o arquivo</option>
-        </select>
+        <input type='file' id="inputState" class="form-select" style="width: 18rem;">
       </div>
       <button type="submit" class="btn btn-primary mt-4 text-center mt-2" style="width: 100%; ">Editar produto</button>
   </div>
